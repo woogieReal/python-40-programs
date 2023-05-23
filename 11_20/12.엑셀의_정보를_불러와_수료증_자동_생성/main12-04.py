@@ -12,6 +12,8 @@ from docx2pdf import convert # 워드를 pdf로 변환하기 위한 라이브러
 
 # 엑셀에서 값을 읽는다.
 load_wb = load_workbook("11_15/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증명단.xlsx")
+
+# 읽어온 엑셀 파일에서 활성화된 시트를 불러온다.
 load_ws = load_wb.active
 
 name_list = []
