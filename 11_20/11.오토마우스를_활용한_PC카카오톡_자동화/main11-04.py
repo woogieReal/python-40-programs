@@ -13,15 +13,15 @@ import collections
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def send_mesaage():
-    picPosition = pyautogui.locateOnScreen('pic1.png')
+    picPosition = pyautogui.locateOnScreen('pic1.png', confidence=0.5, grayscale=True)
     print(picPosition)
 
     if  picPosition is None:
-        picPosition = pyautogui.locateOnScreen('pic2.png')
+        picPosition = pyautogui.locateOnScreen('pic2.png', confidence=0.5, grayscale=True)
         print(picPosition)
 
     if  picPosition is None:
-        picPosition = pyautogui.locateOnScreen('pic3.png')
+        picPosition = pyautogui.locateOnScreen('pic3.png', confidence=0.5, grayscale=True)
         print(picPosition)
 
     # 이미지에서 찾은 좌표의 중간 좌표값을 찾는다.
