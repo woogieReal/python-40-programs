@@ -1,3 +1,7 @@
+"""
+수집한 이메일 주소를 엑셀에 저장하는 코드 만들기
+"""
+
 import requests
 import re
 from openpyxl import load_workbook
@@ -19,7 +23,7 @@ results = list(set(results))
 print(results)
 
 try:
-    wb = load_workbook(r"13. 이메일을 수집하여 엑셀에 기록하기\email.xlsx", data_only=True)
+    wb = load_workbook("11_20/13.이메일을_수집하여_엑셀에_기록하기/email.xlsx", data_only=True)
     sheet  = wb.active
 except:
     wb = Workbook()
@@ -28,4 +32,4 @@ except:
 for result in results:
     sheet.append([result])
 
-wb.save(r"13. 이메일을 수집하여 엑셀에 기록하기\email.xlsx")
+wb.save("11_20/13.이메일을_수집하여_엑셀에_기록하기/email.xlsx")

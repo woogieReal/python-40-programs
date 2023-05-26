@@ -1,3 +1,7 @@
+"""
+사이트에서 이메일 수집하는 코드 만들기
+"""
+
 import requests
 import re
 
