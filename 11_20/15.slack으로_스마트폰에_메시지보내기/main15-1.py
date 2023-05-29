@@ -6,7 +6,7 @@ import requests
 import json
 
 # 자신의 python_bot의 생성된 webhook url을 넣는다.
-slack_webhook_url = "https://hooks.slack.com/services/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"
+slack_webhook_url = "https://hooks.slack.com/services/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"
 
 # webhook 방식으로 메시지를 보내는 함수
 def sendSlackWebhook(strText):
