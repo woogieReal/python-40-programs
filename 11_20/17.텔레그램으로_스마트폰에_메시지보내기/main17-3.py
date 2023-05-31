@@ -1,9 +1,18 @@
+"""
+텔레그램 bot 기능을 활용하여 메시지의 자동응답 보내는 코드 만들기
+"""
+
+# python-telegram-bot==v13.15 
 import telegram
+from dotenv import load_dotenv
+import os
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, Filters
 
-token = "2147448681:AAF54C5_5U7nKqwKvwnbI9n4Dr6m5GmicbY"
-id = "730238165"
+load_dotenv()
+
+token = os.environ.get('TELEGRAM_TOKEN')
+id = os.environ.get('TELEGRAM_CHAT_ID')
 
 bot = telegram.Bot(token)
 bot.sendMessage(chat_id=id, text="자동응답 테스트 입니다. 안녕 또는 뭐해 를 입력하여 보세요")
