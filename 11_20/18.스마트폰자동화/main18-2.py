@@ -1,3 +1,7 @@
+"""
+스마트폰을 제어하는 코드 만들기
+"""
+
 from ppadb.client import Client
 import time
 

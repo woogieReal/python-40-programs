@@ -1,3 +1,7 @@
+"""
+웹 브라우저 화면 캡처 후 저장하는 코드 만들기
+"""
+
 from ppadb.client import Client
 import time
 
@@ -31,5 +35,5 @@ device.shell('input keyevent 66')
 time.sleep(2.0)
 
 result = device.screencap()
-with open(r"18. 스마트폰자동화\screen.png", "wb") as fp:
+with open(r"11_20/18.스마트폰자동화\screen.png", "wb") as fp:
     fp.write(result)
