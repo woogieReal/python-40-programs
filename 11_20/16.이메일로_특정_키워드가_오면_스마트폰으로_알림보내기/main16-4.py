@@ -53,6 +53,7 @@ send_list = []
 while True:
     try:
         # 받은 메일함에서 메일을 읽는다.
+        # Inbox(기본값), Sent, Drafts, Trash, Junk
         imap.select('INBOX')
         resp, data = imap.uid('search', None, 'All')
         all_email = data[0].split()
