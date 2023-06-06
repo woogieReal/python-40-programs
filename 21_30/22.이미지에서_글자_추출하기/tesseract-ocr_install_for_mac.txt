@@ -1,0 +1,8 @@
+# 설치
+brew install tesseract
+
+# 설치 경로 확인
+brew info tesseract
+
+# 지원 언어 설치
+https://tesseract-ocr.github.io/tessdoc/Data-Files

@@ -242,6 +242,7 @@ PyRect==0.2.0
 pyrsistent==0.19.3
 PyScreeze==0.1.28
 PySocks==1.7.1
+pytesseract==0.3.10
 python-dateutil==2.8.2
 python-docx==0.8.11
 python-dotenv==1.0.0
