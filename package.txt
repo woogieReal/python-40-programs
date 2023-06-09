@@ -9,6 +9,7 @@ attrs==23.1.0
 backcall==0.2.0
 beautifulsoup4==4.12.2
 bleach==6.0.0
+blinker==1.6.2
 branca==0.6.0
 bs4==0.0.1
 cachetools==4.2.2
@@ -31,6 +32,7 @@ et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 executing==1.2.0
 fastjsonschema==2.17.1
+Flask==2.3.2
 folium==0.14.0
 fonttools==4.39.4
 googletrans==4.0.0rc1
@@ -46,6 +48,7 @@ idna==2.10
 image==1.5.33
 ipykernel==6.23.1
 ipython==8.14.0
+itsdangerous==2.1.2
 jedi==0.18.2
 Jinja2==3.1.2
 jsonschema==4.17.3
@@ -280,4 +283,5 @@ wcwidth==0.2.6
 webdriver-manager==3.8.6
 webencodings==0.5.1
 websockets==11.0.3
+Werkzeug==2.3.6
 wsproto==1.2.0
