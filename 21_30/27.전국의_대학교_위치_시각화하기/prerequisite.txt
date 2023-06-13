@@ -1,0 +1,2 @@
+# 공간정보 오픈플랫폼
+https://www.vworld.kr/dev/v4dv_geocoderguide2_s001.do
