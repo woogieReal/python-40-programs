@@ -258,6 +258,9 @@ pyobjc-framework-WebKit==9.1.1
 pyparsing==3.0.9
 pyperclip==1.8.2
 pypng==0.20220715.0
+PyQt6==6.5.1
+PyQt6-Qt6==6.5.1
+PyQt6-sip==13.5.1
 PyRect==0.2.0
 pyrsistent==0.19.3
 PyScreeze==0.1.28

@@ -1,0 +1,7 @@
+# https://stackoverflow.com/questions/73068818/pyqt5-error-metadata-generation-failed
+# pyqt5 > pyqt6 설치
+pip install pyqt6
+
+# https://stackoverflow.com/questions/69870103/how-to-fix-pyqt6-tools-installation-error
+# 설치 실패
+pip install pyqt6-tools
