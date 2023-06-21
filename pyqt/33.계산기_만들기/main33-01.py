@@ -8,7 +8,7 @@ from PyQt6 import uic
 
 
 # [계산기.ui]를 불러온다.
-ui_path = "31_40/33.계산기_만들기/계산기.ui"
+ui_path = "33.계산기_만들기/계산기.ui"
 form_class = uic.loadUiType(ui_path)[0] 
 
 

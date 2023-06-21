@@ -1,1 +1,0 @@
-pyinstaller -w -F 21_30/30.가상화폐_금액표시_GUI_프로그램_만들기/main30-04.py
