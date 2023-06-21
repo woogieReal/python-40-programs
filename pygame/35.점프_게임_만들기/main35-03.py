@@ -20,6 +20,7 @@ class Player():
     # 파란색의 네모를 x, y 좌표에 40x40사이즈로 그림. 반환하는 값은 좌표와 크기
     def draw(self):
         return pygame.draw.rect(screen, (0,0,255), (self.x, self.y, 40, 40))
+        # return pygame.draw.circle(screen, (0,0,255), [self.x, self.y], 40)
 
     # 플레이어의 점프를 구현
     def jump(self):
