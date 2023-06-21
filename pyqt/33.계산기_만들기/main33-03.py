@@ -1,3 +1,7 @@
+"""
+수식을 계산 코드 추가하여 계산기 코드 완성
+"""
+
 import sys 
 from PyQt6.QtWidgets import *
 from PyQt6 import uic
