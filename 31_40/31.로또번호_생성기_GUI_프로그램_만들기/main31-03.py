@@ -7,6 +7,7 @@ lotto_num = range(1,46)
 def buttonClick():
     for i in range(5):
         # 랜덤으로 생성된 번호 6개를 map함수를 사용하여 문자열로 변환
+        # map(function, iterable), map 함수의 반환 값은 map객체
         lottoPick = map(str,random.sample(lotto_num,6))
         
         # 문자열 리스트를 합쳐서 하나의 문자열로 변환.
