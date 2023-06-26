@@ -1,0 +1,5 @@
+# 오류 메시지
+OSError: FLAC conversion utility not available - consider installing the FLAC command line application by running `apt-get install flac` or your operating system's equivalent
+
+# 해결
+`brew install flac`
