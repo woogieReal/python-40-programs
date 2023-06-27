@@ -1,6 +1,9 @@
 """
 특정 키워드에 답변하는 음성인식 비서 코드 만들기
 
+참고
+https://pypi.org/project/SpeechRecognition/
+
 주의: 구글 음성변환은 API키 없이 사용시 하루 50회 제한이 있다.
 """
 
