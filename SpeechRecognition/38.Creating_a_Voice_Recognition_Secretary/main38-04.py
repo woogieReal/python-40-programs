@@ -11,7 +11,11 @@ import os
 from datetime import datetime
 import requests
 import json
+import telegram
+from dotenv import load_dotenv
 
+
+load_dotenv()
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -62,6 +66,15 @@ def record():
     wf.close()
 
 
+# 텔레그램 메시지 전송
+def sendTelegram():
+    token = os.environ.get('TELEGRAM_TOKEN')
+    id = os.environ.get('TELEGRAM_CHAT_ID')
+
+    bot = telegram.Bot(token)
+    bot.sendMessage(chat_id=id, text="당신을 부르고 있습니다.")
+
+
 # 슬랙 메시지 전송
 def sendSlackWebhook():
     print("슬랙 메시지를 전송합니다.")
@@ -95,7 +108,8 @@ try:
             if "안녕" in stt:
                 record()
                 playsound(OOO_REPLY_FILENAME)
-                sendSlackWebhook()
+                # sendSlackWebhook()
+                sendTelegram()
                 
             
         except sr.UnknownValueError:
