@@ -1,3 +1,8 @@
+"""
+음성인식 -> 음성실행 -> 음성저장 -> 메시지 전송
+ex) '안녕하세요' -> 부재중 메시지 실행 ('잠시만 기다려주세요') -> 녹음 -> 슬랙 메시지 전송
+"""
+
 import speech_recognition as sr
 import pyaudio
 import wave
@@ -58,13 +63,13 @@ def record():
 
 
 # 슬랙 메시지 전송
-def sendSlackWebhook(strText):
+def sendSlackWebhook():
     print("슬랙 메시지를 전송합니다.")
-    slack_webhook_url = "https://hooks.slack.com/services/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"
+    slack_webhook_url = "https://hooks.slack.com/services/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"
 
     headers = { "Content-type": "application/json" }
 
-    data = { "text": f"당신을 부르고 있습니다. 녹음메시지: {strText}" }
+    data = { "text": "당신을 부르고 있습니다." }
 
     res = requests.post(slack_webhook_url, headers=headers, data=json.dumps(data))
     print(res)
@@ -90,7 +95,7 @@ try:
             if "안녕" in stt:
                 record()
                 playsound(OOO_REPLY_FILENAME)
-                sendSlackWebhook(stt)
+                sendSlackWebhook()
                 
             
         except sr.UnknownValueError:
