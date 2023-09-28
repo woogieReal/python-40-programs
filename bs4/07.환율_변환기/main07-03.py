@@ -21,7 +21,6 @@ def get_exchange_rate(target1, target2):
 
     content = BeautifulSoup(response.content, 'html.parser')
     containers = content.find('span', {'data-test': 'instrument-price-last'})
-    # 에러 해결이 안됨
-    # print(containers.text)
+    print(containers.text)
 
 get_exchange_rate('usd', 'krw')
