@@ -4,7 +4,9 @@
 
 import itertools
 import zipfile
+import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def un_zip(passwd_string, min_len, max_len, zFile):
     for len in range(min_len, max_len):
@@ -24,7 +26,7 @@ def un_zip(passwd_string, min_len, max_len, zFile):
 passwd_string = "012345789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # 비밀번호가 입력된 암축파일의 경로를 입력하여 불러온다.
-zFile = zipfile.ZipFile('01_10/06.압축파일_암호_푸는_프로그램/암호1234.zip')
+zFile = zipfile.ZipFile('암호1234.zip')
 
 min_len = 1
 max_len = 5

@@ -6,12 +6,15 @@
 
 import itertools
 import zipfile
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 숫자, 영문, 소문자, 영문 대문자의 문자열을 바인딩
 passwd_string = "012345789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # 비밀번호가 입력된 암축파일의 경로를 입력하여 불러온다.
-zFile = zipfile.ZipFile('01_10/06.압축파일_암호_푸는_프로그램/암호1234.zip')
+zFile = zipfile.ZipFile('암호1234.zip')
 
 for len in range(1, 6):
     to_attempt = itertools.product(passwd_string, repeat=len)
