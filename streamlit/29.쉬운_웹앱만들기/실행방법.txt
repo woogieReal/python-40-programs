@@ -1,0 +1,1 @@
+streamlit run 파일명.py
