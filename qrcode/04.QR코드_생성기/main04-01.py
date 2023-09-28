@@ -5,9 +5,11 @@ qr코드 생성기는 단순하게 문자를 qr코드로 변환하기 때문에 
 """
 
 import qrcode
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 qr_data = 'www.naver.com'
 qr_img = qrcode.make(qr_data)
 
-save_path = '01_10/04.QR코드_생성기/' + qr_data + '.png'
+save_path = qr_data + '.png'
 qr_img.save(save_path)
