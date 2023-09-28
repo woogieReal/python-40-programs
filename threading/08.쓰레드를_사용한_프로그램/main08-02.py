@@ -20,5 +20,5 @@ t1.daemon = True
 t1.start()
 
 while True:
-    print("메인동직")
+    print("메인동작")
     time.sleep(2.0)
