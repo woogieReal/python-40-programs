@@ -3,9 +3,12 @@
 """
 
 from openpyxl import load_workbook # 엑셀에서 파일을 읽이 위해서 openpyxl에서 load_workbook을 불러옴
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 엑셀 파일을 읽어옴
-load_xb = load_workbook("11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증명단.xlsx")
+load_xb = load_workbook("수료증명단.xlsx")
 
 # 읽어온 엑셀 파일에서 활성화된 시트를 불러온다.
 load_ws = load_xb.active

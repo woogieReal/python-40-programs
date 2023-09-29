@@ -3,6 +3,9 @@
 """
 
 import pandas as pd # 데이터 등을 다루는 유명한 라이브러리
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 데이터프레임 생성
 df = pd.DataFrame([["홍길동", "1990.01.02", "2021-0001"],
@@ -15,4 +18,4 @@ df = pd.DataFrame([["홍길동", "1990.01.02", "2021-0001"],
 print(df)
 
 # 데이터프레임을 엑셀로 저장, 인덱스와 헤더는 저장하지 않음
-df.to_excel('11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증명단.xlsx', index=False, header=False)
+df.to_excel('수료증명단.xlsx', index=False, header=False)

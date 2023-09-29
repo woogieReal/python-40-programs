@@ -6,9 +6,12 @@ import docx
 from docx.oxml.ns import qn
 # from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 파일을 읽어온다.
-doc = docx.Document('11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증양식.docx')
+doc = docx.Document('수료증양식.docx')
 
 # 기본이 되는 폰트와 글씨크기를 정한다.
 style = doc.styles['Normal']
@@ -82,4 +85,4 @@ run.font.size = docx.shared.Pt(20)
 para.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
 # 파일로 저장한다.
-doc.save('11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증결과.docx')
+doc.save('수료증결과.docx')

@@ -9,9 +9,12 @@ from docx.oxml.ns import qn
 # from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx2pdf import convert # 워드를 pdf로 변환하기 위한 라이브러리를 불러온다.
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 엑셀에서 값을 읽는다.
-load_wb = load_workbook("11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증명단.xlsx")
+load_wb = load_workbook("수료증명단.xlsx")
 
 # 읽어온 엑셀 파일에서 활성화된 시트를 불러온다.
 load_ws = load_wb.active
@@ -31,7 +34,7 @@ print(ho_list)
 
 # 엑셀에서 읽은 이름 리스트의 길이만큼 반복한다.
 for i in range(len(name_list)):
-    doc = docx.Document("11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/수료증양식.docx")
+    doc = docx.Document("수료증양식.docx")
     style = doc.styles['Normal']
     style.font.name = '나눔고딕'
     style._element.rPr.rFonts.set(qn('w:eastAsia'), '나눔고딕')
@@ -101,8 +104,8 @@ for i in range(len(name_list)):
     para.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
     # 워드파일을 생성
-    doc.save('11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/' + name_list[i] + '.docx')
+    doc.save('' + name_list[i] + '.docx')
     
     # 워드파일을 읽어 pdf로 변환
-    convert('11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/' + name_list[i] + '.docx',
-            '11_20/12.엑셀의_정보를_불러와_수료증_자동_생성/' + name_list[i] + '.pdf')
+    convert('' + name_list[i] + '.docx',
+            '' + name_list[i] + '.pdf')
