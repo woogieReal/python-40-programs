@@ -6,6 +6,9 @@ import requests
 import re
 from openpyxl import load_workbook
 from openpyxl import Workbook
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 url = 'https://news.v.daum.net/v/20211129144552297'
 
@@ -23,7 +26,7 @@ results = list(set(results))
 print(results)
 
 try:
-    wb = load_workbook("11_20/13.이메일을_수집하여_엑셀에_기록하기/email.xlsx", data_only=True)
+    wb = load_workbook("email.xlsx", data_only=True)
     sheet  = wb.active
 except:
     wb = Workbook()
@@ -32,4 +35,4 @@ except:
 for result in results:
     sheet.append([result])
 
-wb.save("11_20/13.이메일을_수집하여_엑셀에_기록하기/email.xlsx")
+wb.save("email.xlsx")
