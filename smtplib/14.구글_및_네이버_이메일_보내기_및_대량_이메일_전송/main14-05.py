@@ -7,8 +7,11 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import getpass
+import os
 
-load_wb = load_workbook("11_20/14.구글_및_네이버_이메일_보내기_및_대량_이메일_전송/이메일주소.xlsx", data_only=True)
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+load_wb = load_workbook("이메일주소.xlsx", data_only=True)
 load_ws = load_wb.active
 
 for i in range(1, load_ws.max_row + 1):

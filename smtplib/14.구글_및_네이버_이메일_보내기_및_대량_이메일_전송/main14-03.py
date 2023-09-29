@@ -1,5 +1,6 @@
 """
 파일을 첨부하여 메일 보내는 코드 만들기
+gmail로 수신시 자동으로 스팸으로 분류됨
 """
 
 import smtplib
@@ -7,6 +8,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import getpass
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 send_email = "123wodnr@naver.com"
 send_pwd = getpass.getpass('Password:')
@@ -31,7 +35,7 @@ text = """
 contentPart = MIMEText(text)
 msg.attach(contentPart)
 
-etc_file_path = '11_20/14.구글_및_네이버_이메일_보내기_및_대량_이메일_전송/첨부파일.txt'
+etc_file_path = '첨부파일.txt'
 with open(etc_file_path, 'rb') as f:
     etc_part = MIMEApplication(f.read())
     etc_part.add_header('Content-Disposition',
