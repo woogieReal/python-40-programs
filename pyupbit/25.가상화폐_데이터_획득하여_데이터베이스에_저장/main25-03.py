@@ -4,8 +4,11 @@
 
 import pandas as pd
 import sqlite3
+import os
 
-db_path = '21_30/25.가상화폐_데이터_획득하여_데이터베이스에_저장/coin.db'
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+db_path = 'coin.db'
 con = sqlite3.connect(db_path, isolation_level=None)
 
 readed_df = pd.read_sql("SELECT * FROM 'BTC'", con, index_col='index')

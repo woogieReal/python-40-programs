@@ -5,6 +5,9 @@
 import pyupbit
 import sqlite3
 import datetime
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # datetime 라이브러리를 사용하여 시작날짜와 종료날짜의 모든 날을 리스트형태로 반환한다.
 def date_range(start, end):
@@ -32,7 +35,7 @@ for day in reversed(dates):
     price_now = pyupbit.get_ohlcv(ticker=ticker, interval=interval, to=to, count=count)
     
     print(price_now)
-    db_path = '21_30/25.가상화폐_데이터_획득하여_데이터베이스에_저장/coin.db'
+    db_path = 'coin.db'
     
     con = sqlite3.connect(db_path, isolation_level=None)
     price_now.to_sql('BTC', con, if_exists='append')
