@@ -3,6 +3,9 @@
 """
 
 import folium
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 처음 보여주는 위도와 경도를 설정, zoom_start는 지도의 배율
 map = folium.Map(location=[37, 127], zoom_start=7)
@@ -15,4 +18,4 @@ marker = folium.Marker([37.341435483, 126.733026596],
 # 마커를 추가
 marker.add_to(map)
 
-map.save('21_30/27.전국의_대학교_위치_시각화하기/uni_map.html')
+map.save('uni_map.html')

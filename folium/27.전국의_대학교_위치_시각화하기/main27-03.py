@@ -8,10 +8,13 @@ from openpyxl import Workbook
 import re
 from dotenv import load_dotenv
 import os
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 load_dotenv()
 
-file_path = '21_30/27.전국의_대학교_위치_시각화하기/고등교육기관_하반기_주소록-2022.xlsx'
+file_path = '고등교육기관_하반기_주소록-2022.xlsx'
 df_from_excel = pd.read_excel(file_path, engine='openpyxl')
 
 # 5번째 위치의 데이터를 columns으로 설정
@@ -50,7 +53,7 @@ def request_geo(road):
 
 # 엑셀 파일이 읽어오고 없으면 만든다.
 try:
-    wb = load_workbook('21_30/27.전국의_대학교_위치_시각화하기/학교주소좌표.xlsx', data_only=True)
+    wb = load_workbook('학교주소좌표.xlsx', data_only=True)
     sheet = wb.active
 except:
     wb = Workbook()
@@ -71,4 +74,4 @@ for num, value in enumerate(address_list):
     sheet.append([university_list[num], addr, x, y])
 
 
-wb.save('21_30/27.전국의_대학교_위치_시각화하기/학교주소좌표.xlsx')
+wb.save('학교주소좌표.xlsx')

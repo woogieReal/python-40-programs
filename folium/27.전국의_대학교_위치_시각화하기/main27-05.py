@@ -4,9 +4,12 @@
 
 import pandas as pd
 import folium
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 엑셀 파일을 읽어온다.
-file_path = '21_30/27.전국의_대학교_위치_시각화하기/학교주소좌표.xlsx'
+file_path = '학교주소좌표.xlsx'
 df_from_excel = pd.read_excel(file_path, engine='openpyxl', header=None)
 
 # 컬럼 이름 지정
@@ -31,4 +34,4 @@ for i in range(len(name_list)):
         marker.add_to(map)
 
 
-map.save('21_30/27.전국의_대학교_위치_시각화하기/uni_map.html')
+map.save('uni_map.html')

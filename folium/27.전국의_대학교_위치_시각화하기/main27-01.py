@@ -3,8 +3,11 @@
 """
 
 import pandas as pd
+import os
 
-file_path = '21_30/27.전국의_대학교_위치_시각화하기/고등교육기관_하반기_주소록-2022.xlsx'
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+file_path = '고등교육기관_하반기_주소록-2022.xlsx'
 df_from_excel = pd.read_excel(file_path, engine='openpyxl')
 
 # 5번째 위치의 데이터를 columns으로 설정
