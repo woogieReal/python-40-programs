@@ -4,13 +4,16 @@
 
 import numpy as no
 import cv2
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # 얼굴과 눈을 찾기 위한 OpenCV 알고리즘이 적용된 파일을 불러온다.
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
 
 # OpenCV에서 한글경로의 파일을 읽지 못해 numpy로 파일을 읽어온다.
-ff = no.fromfile('21_30/23.사진에_얼굴만_찾아_모자이크처리/샘플사진.jpg', no.uint8)
+ff = no.fromfile('샘플사진.jpg', no.uint8)
 
 # imdecode를 하여 numpy의 이미지 파일을 OpenCV 이미지로 불러온다.
 img = cv2.imdecode(ff, cv2.IMREAD_UNCHANGED)
