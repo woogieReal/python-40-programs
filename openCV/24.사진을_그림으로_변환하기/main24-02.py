@@ -4,9 +4,12 @@
 
 import numpy as np
 import cv2
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # OpenCV에서 한글경로의 파일을 읽지 못해 numpy로 파일을 읽어온다.
-ff = np.fromfile('21_30/24.사진을_그림으로_변환하기/샘플사진.jpg', np.uint8)
+ff = np.fromfile('샘플사진.jpg', np.uint8)
 
 # imdecode를 하여 numpy의 이미지 파일을 OpenCV 이미지로 불러온다.
 img = cv2.imdecode(ff, cv2.IMREAD_UNCHANGED)
