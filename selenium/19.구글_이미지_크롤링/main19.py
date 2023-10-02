@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager # 구글 크롬 드라�
 from selenium import webdriver # 크롬 드라이버의 제어를 위해 selenium 라이브러리를 불러옴
 
 # 크롬 드라이버를 시작, 프로그램이 설치되지 않았다면 자동으로 설치
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome()
 
 # 구글의 이미지 검색 사이트로 이동
 URL='https://www.google.co.kr/imghp'

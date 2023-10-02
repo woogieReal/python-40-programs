@@ -8,7 +8,7 @@ import os
 
 load_dotenv()
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome()
 
 send_message_list = []
 
