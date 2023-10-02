@@ -3,8 +3,11 @@
 """
 
 import pandas as pd
+import os
 
-file_path = '21_30/26.로또번호_시각화하기/lotto.xlsx'
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+file_path = 'lotto.xlsx'
 
 # 엔진은 openpyxl을 사용하여 판다스의 데이터프레임으로 엑셀 파일을 불러온다.
 df_from_excel = pd.read_excel(file_path, engine='openpyxl')
